@@ -7,7 +7,7 @@ import netifaces
 import urllib.request
 import psutil
 
-# GET hostname and local IP addresss
+# GET hostname and local IP addressssssssss
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
