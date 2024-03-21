@@ -46,7 +46,7 @@ os_version = platform.version()
 # GET CPU information
 cpu_count = psutil.cpu_count(logical=False)
 cpu_freq = psutil.cpu_freq().current if psutil.cpu_freq() else 'N/A'
-cpu_temp = psutil.sensors_temperatures().get('coretemp')[0].current if 'coretemp' in psutil.sensors_temperatures() else 'N/A'
+# cpu_temp = psutil.sensors_temperatures().get('coretemp')[0].current if 'coretemp' in psutil.sensors_temperatures() else 'N/A'
 
 # GET memory information
 mem_total = round(psutil.virtual_memory().total / (1024 ** 3), 2)
@@ -55,7 +55,7 @@ mem_free = round(psutil.virtual_memory().free / (1024 ** 3), 2)
 
 # print network, operating system, CPU, and memory information
 print('Hostname: {}'.format(hostname))
-print('Hostname IP Address (IPv4): {}'.format(hostname_ip)) # print hostname IP address
+# print('Hostname IP Address (IPv4): {}'.format(hostname_ip)) # print hostname IP address
 print('Local IP Address (IPv4): {}'.format(local_ip))
 print('Public IP Address (IPv4): {}'.format(public_ip))
 for addr in ipv6_addresses:
@@ -63,13 +63,13 @@ for addr in ipv6_addresses:
         print('IP Address (IPv6): {}'.format(addr))
 print('Netmask: {}'.format(netmask))
 print('Broadcast: {}'.format(broadcast))
-print('MAC Address: {}'.format(mac_addr))
+# print('MAC Address: {}'.format(mac_addr))
 print('Operating System: {}'.format(os_name))
 print('Kali Linux Version: {}'.format(os_release))
 print('Kernel Version: {}'.format(os_version))
 print('CPU Count: {}'.format(cpu_count))
 print('CPU Frequency (MHz): {}'.format(cpu_freq))
-print('CPU Temperature (°C): {}'.format(cpu_temp))
+# print('CPU Temperature (°C): {}'.format(cpu_temp))
 print('Memory Total (GB): {}'.format(mem_total))
 print('Memory Used (GB): {}'.format(mem_used))
 print('Memory Free (GB): {}'.format(mem_free))
